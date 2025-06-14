@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kirtikumar Prajapati | Portfolio</title>
+    <!-- Link to external CSS
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons CDN 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+  <style>
+   /* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd);
+  background-size: 400% 400%;
+  animation: backgroundShift 15s infinite alternate;
+}
+
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Navigation */
+nav.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.navbar li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+#menu {
+  display: none;
+}
+
+/* Section Styling */
+section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section h2.heading,
+section h1.heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+section h2.heading i,
+section h1.heading i {
+  margin-right: 0.5rem;
+  color: #ffeb3b;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.home .content {
+  flex: 1;
+}
+
+.home .content h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.home .content span {
+  color: #ffeb3b;
+  font-weight: bold;
+}
+
+.home .image {
+  flex: 1;
+}
+
+.home img {
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  margin-top: 1rem;
+  background: #ffffff;
+  color: #333;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #ffeb3b;
+  color: #000;
+}
+
+/* About Section */
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about .image img {
+  width: 250px;
+  border-radius: 12px;
+  border: 3px solid white;
+}
+
+.about .content h3 {
+  font-size: 1.5rem;
+}
+
+.about .tag {
+  display: block;
+  margin-bottom: 1rem;
+  color: #5c3bff;
+  font-style: italic;
+}
+
+.box-container {
+  margin-top: 1rem;
+}
+
+.box p {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+/* Skills Section */
+.skills .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.skill-box {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 120px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.skill-box:hover {
+  transform: scale(1.1);
+}
+
+.skill-box img.skill-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+.skill-box span {
+  display: block;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Education Section */
+.education .box-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.education .box {
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  align-items: center;
+  gap: 2rem;
+}
+
+.education .image img {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.education .content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.education .content p {
+  margin: 0.5rem 0;
+}
+
+.education .content h4 {
+  font-size: 1rem;
+  color: #00a308;
+}
+
+/* Achievements */
+.Achievements {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Footer */
+.footer {
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 3rem 1rem;
+  color: white;
+}
+
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer .box h3 {
+  margin-bottom: 1rem;
+}
+
+.footer .box a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 0.2rem 0;
+}
+
+.footer .box a:hover {
+  text-decoration: underline;
+}
+
+.footer .credit a {
+  color: #ffeb3b;
+  text-decoration: none;
+}
+
+/* Scroll to top button */
+#scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  background: rgba(255, 0, 0, 0.4);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: none;
+  z-index: 999;
+}
+
+#scroll-top:hover {
+  background: white;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home, .about .row, .education .box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .skill-box {
+    width: 100px;
+  }
+}
+
+  </style>
+
+</head>
+
+<body oncontextmenu="return false">
+
+    <!-- Navbar Section -->
+    <header>
+        <a href="/" class="logo">Kirtikumar Prajapati</a>
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#Achievements">Achievements</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="home" id="home">
+        <div class="content">
+            <h2>Hi There, I'm <span>Kirtikumar</span> Prajapati</h2>
+            <p>I am into <span class="typing-text"></span></p>
+            <a href="#about" class="btn">About Me <i class="fas fa-arrow-circle-down"></i></a>
+        </div>
+        <div class="image">
+            <img draggable="false" class="tilt" src="img2.jpg" alt="kirti's Image">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+        <div class="row">
+            <div class="image">
+                <img draggable="false" class="tilt" src="kirti.jpg" alt="kirti's Profile Image">
+            </div>
+            <div class="content">
+                <h3>I'm Kirtikumar Prajapati</h3>
+                <span class="tag">Full Stack Web Developer</span>
+                <p>I am currently pursuing CSE (Computer Science And Engineering) in INDUS University (second year),
+                    passionate about improving coding and problem-solving skills.</p>
+                <div class="box-container">
+
+                    <div class="box">
+                        <p><span>Email: </span> kirtikumarprajapati01@gmail.com</p>
+                        <p><span>Place: </span> Gujarat, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="heading"><i class="fas fa-laptop-code"></i> Some <span>Skills</span></h2>
+        <div class="container">
+            <div class="row" id="skillsContainer">
+                <div class="skill-box">
+                    <img src="html.png" alt="HTML logo" class="skill-logo">
+                    <span>HTML</span>
+                </div>
+                <div class="skill-box">
+                    <img src="css.png" alt="CSS logo" class="skill-logo">
+                    <span>CSS</span>
+                </div>
+                <div class="skill-box">
+                    <img src="c.png" alt="C logo" class="skill-logo">
+                    <span>C</span>
+                </div>
+                <div class="skill-box">
+                    <img src="cpp.png" alt="CPP" class="skill-logo">
+                    <span>CPP</span>
+
+                </div>
+                <div class="skill-box">
+                    <img src="py.jpeg" alt="JavaScript logo" class="skill-logo">
+                    <!-- Add other skills here -->
+                </div>
+            </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <h1 class="heading"><i class="fas fa-graduation-cap"></i> SOME <span>LEARNING</span> ALONG THE WAY </h1>
+        <div class="box-container">
+           <div class="box">
+                <div class="image">
+                    <img draggable="false" src="primary.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3> L.F.T English And Gujrati Medium School,Harij </h3>
+                    <p>Primary-Secondary Education (SSC)</p>
+                    <h4>2012-2022 | Completed</h4>
+                </div>
+
+            </div>
+            <br>
+           
+            <div class="box">
+                <div class="image">
+                    <img draggable="false" src="school.jpeg" alt="">
+                </div>
+                <div class="content">
+                    <h3 Pioneer schools of science patan </h3>
+                    <p>Higher Secondary Education (HSC)</p>
+                    <h4>2022-2024 | Completed</h4>
+                </div>
+            </div>
+            <br>
+           
+            <div class="box">
+                <div class="image">
+                    <img draggable="false" src="indus.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Indus University ,Rancharda,Ahmadabad</h3>
+                    <p>Bachelor of Technology in Computer Science And Engineering</p>
+                    <h4>2024-2028 | Pursuing</h4>
+                </div>
+            </div>
+
+          
+            <!-- Add other education details here -->
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="Achievements" id="Achievements">
+        <h2 class="heading"><i class="fas fa-briefcase"></i> SOME <span>ACHIEVEMENTS</span> </h2>
+        <!-- Add achievement timeline here -->
+         <img src="c_certificate.png" alt="">
+        <img src="py_certificate.png" alt="">
+    </section>
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>kirtikumar Prajapati</h3>
+                <p>Thank you for visiting my personal portfolio website.</p>
+            </div>
+            <div class="box">
+                <h3>Links</h3>
+                <a href="#home"><i class="fas fa-chevron-circle-right"></i> Home</a>
+                <a href="#about"><i class="fas fa-chevron-circle-right"></i> About</a>
+                <a href="#skills"><i class="fas fa-chevron-circle-right"></i> Skills</a>
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-phone"></i> +91 XXX-XXX-XXXX</p>
+                <p><i class="fas fa-envelope"></i> kirtikumarprajapati01@gmail.com</p>
+            </div>
+        </div>
+        <h1 class="credit">© All rights reserved. <a href="https://www.linkedin.com/feed/">Kirtikumar Prajapati</a></h1>
+    </section>
+
+    <!-- Scroll Top Button -->
+    <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+
+   
+
+</body>
+
+</html>
